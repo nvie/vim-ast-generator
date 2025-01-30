@@ -2,18 +2,18 @@ syntax match agComment ,\v//.*$,
 syntax match agComment ,\v#.*$,
 " syntax region agComment start=,\v/\*, end=,\v\*/, fold
 
-syntax keyword agKeywords settings
-syntax keyword agKeywords semantic
-syntax keyword agKeywords method
-syntax keyword agKeywords property
+syntax keyword agKeyword settings
+syntax keyword agKeyword semantic
+syntax keyword agKeyword method
+syntax keyword agKeyword property
 
 " Builtin types
 syntax keyword agBuiltin string
 syntax keyword agBuiltin number
 syntax keyword agBuiltin boolean
 
-syntax match agNodeDef /\v<[A-Z][a-z0-9_]+>(\s*[{=])@=/
 syntax match agNodeName /\v<[A-Z][a-zA-Z0-9_]*>/
+syntax match agNodeDef /\v<[A-Z][a-z0-9_]+>(\s*[{=])@=/
 " syntax match agIdentifier /\v<[a-z][a-z0-9_]+>/
 
 " Literals
@@ -26,7 +26,7 @@ syntax region agDoubleQuotedString start=/\v"/ skip=/\v\\./ end=/\v"/ end=/\v$/ 
 
 " Set highlights
 highlight default link agComment Comment
-highlight default link agKeywords SpecialChar
+highlight default link agKeyword SpecialChar
 highlight default link agNumber Number
 highlight default link agDoubleQuotedString String
 highlight default link agNodeDef Function
