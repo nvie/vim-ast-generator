@@ -1,10 +1,16 @@
 syntax match agComment ,\v//.*$,
+syntax match agComment ,\v#.*$,
 " syntax region agComment start=,\v/\*, end=,\v\*/, fold
 
 syntax keyword agKeywords settings
 syntax keyword agKeywords semantic
 syntax keyword agKeywords method
 syntax keyword agKeywords property
+
+" Builtin types
+syntax keyword agTypeName string
+syntax keyword agTypeName number
+syntax keyword agTypeName boolean
 
 syntax match agTypeName /\v<[A-Z][a-zA-Z0-9_]*>/
 syntax match agIdentifier /\v<[a-z][a-z0-9_]+>/
