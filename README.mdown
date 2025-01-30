@@ -1,0 +1,3 @@
+# vim-ast-generator
+
+A syntax highlighter for [ast-generator](https://github.com/nvie/ast-generator) `*.grammar` files.
