@@ -8,11 +8,11 @@ syntax keyword agKeywords method
 syntax keyword agKeywords property
 
 " Builtin types
-syntax keyword agTypeName string
-syntax keyword agTypeName number
-syntax keyword agTypeName boolean
+syntax keyword agBuiltin string
+syntax keyword agBuiltin number
+syntax keyword agBuiltin boolean
 
-syntax match agTypeName /\v<[A-Z][a-zA-Z0-9_]*>/
+syntax match agNodeName /\v<[A-Z][a-zA-Z0-9_]*>/
 syntax match agIdentifier /\v<[a-z][a-z0-9_]+>/
 
 " Literals
@@ -28,7 +28,8 @@ highlight default link agComment Comment
 highlight default link agKeywords Keyword
 highlight default link agNumber Number
 highlight default link agDoubleQuotedString String
-highlight default link agTypename Type
+highlight default link agNodeName Function
+highlight default link agBuiltin Type
 "highlight default link agCommonError Error
 
 " Identifiers aren't that nice
