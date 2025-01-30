@@ -12,11 +12,11 @@ syntax keyword agBuiltin string
 syntax keyword agBuiltin number
 syntax keyword agBuiltin boolean
 
+syntax match agNodeDef /\v<[A-Z][a-z0-9_]+>/ skipwhite skipempty nextgroup=agNodeDefBlock
+syntax region agNodeDefBlock start=/\v\{/ end=/\v\}/ skipwhite skipempty contained containedIn=agNodeDef
+
 syntax match agNodeName /\v<[A-Z][a-zA-Z0-9_]*>/
 syntax match agIdentifier /\v<[a-z][a-z0-9_]+>/
-
-syntax match agNodeDef /\v<[A-Z][a-z0-9_]+>/ skipwhite skipempty nextgroup=agNodeDefBlock
-syntax region agNodeDefBlock start=/\v\{/ end=/\v\}/ skipwhite skipempty contained
 
 " Literals
 syntax match agNumber /\v<\d+(_\d+)*>/
