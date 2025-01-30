@@ -25,7 +25,7 @@ syntax region agDoubleQuotedString start=/\v"/ skip=/\v\\./ end=/\v"/ end=/\v$/ 
 
 " Set highlights
 highlight default link agComment Comment
-highlight default link agKeyword Delimiter
+highlight default link agKeyword Special
 highlight default link agNumber Number
 highlight default link agDoubleQuotedString String
 highlight default link agNodeDef Function
