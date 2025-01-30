@@ -12,7 +12,7 @@ syntax keyword agBuiltin string
 syntax keyword agBuiltin number
 syntax keyword agBuiltin boolean
 
-syntax match agNodeDef /\v<[a-z][a-z0-9_]+>(\s*[{=])@=/
+syntax match agNodeDef /\v<[A-Z][a-z0-9_]+>(\s*[{=])@=/
 syntax match agNodeName /\v<[A-Z][a-zA-Z0-9_]*>/
 " syntax match agIdentifier /\v<[a-z][a-z0-9_]+>/
 
