@@ -1,6 +1,6 @@
-syntax match agComment ,\v//.*$,
 syntax match agComment ,\v#.*$,
-" syntax region agComment start=,\v/\*, end=,\v\*/, fold
+"syntax match agComment ,\v//.*$,
+"syntax region agComment start=,\v/\*, end=,\v\*/, fold
 
 syntax keyword agKeyword settings
 syntax keyword agKeyword semantic
