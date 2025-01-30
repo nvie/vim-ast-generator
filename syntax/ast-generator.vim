@@ -15,6 +15,9 @@ syntax keyword agBuiltin boolean
 syntax match agNodeName /\v<[A-Z][a-zA-Z0-9_]*>/
 syntax match agIdentifier /\v<[a-z][a-z0-9_]+>/
 
+syntax match agNodeDef /\v<[A-Z][a-z0-9_]+>/ skipwhite skipempty nextgroup=agNodeDefBlock
+syntax region agNodeDefBlock start=/\v\{/ end=/\v\}/ skipwhite skipempty contained
+
 " Literals
 syntax match agNumber /\v<\d+(_\d+)*>/
 syntax region agDoubleQuotedString start=/\v"/ skip=/\v\\./ end=/\v"/ end=/\v$/ oneline
@@ -25,10 +28,11 @@ syntax region agDoubleQuotedString start=/\v"/ skip=/\v\\./ end=/\v"/ end=/\v$/ 
 
 " Set highlights
 highlight default link agComment Comment
-highlight default link agKeywords Keyword
+highlight default link agKeywords Special
 highlight default link agNumber Number
 highlight default link agDoubleQuotedString String
-highlight default link agNodeName Function
+highlight default link agNodeDef Function
+"highlight default link agNodeName Function
 highlight default link agBuiltin Type
 "highlight default link agCommonError Error
 
